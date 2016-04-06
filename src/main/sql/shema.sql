@@ -11,7 +11,7 @@ CREATE TABLE document (
   emailAddress VARCHAR(100),
   positionApplicant VARCHAR(100),
   fullName VARCHAR(100),
-  date DATE ,
+  date DATE,
 
   FOREIGN KEY (userId) REFERENCES user(id)
 )
