@@ -32,7 +32,7 @@ paths:
       description: Создание нового документа
       parameters:
        - in: body
-         name: body
+         userName: body
          description: Добавление объекта модели Documents
          required: false
          schema:
@@ -47,7 +47,7 @@ paths:
       summary: Просмотр документа
       description: Cтраница отображающая содержимое документа
       parameters:
-      - name: id
+      - userName: id
         in: path
         description: id документа
         required: true
@@ -71,7 +71,7 @@ paths:
       summary: Просмотр приложения к документу
       description: Просмотр списка участников
       parameters:
-      - name: document-id
+      - userName: document-id
         in: path
         description: id документа
         required: true
@@ -92,14 +92,14 @@ paths:
       summary: Добавление приложения к документу
       description: Добавление списка участников
       parameters:
-       - name: document-id
+       - userName: document-id
          in: path
          description: id документа
          required: true
          type: number
          format: int
        - in: body
-         name: body
+         userName: body
          description: Добавление объекта модели участников
          required: false
          schema:
@@ -133,7 +133,7 @@ paths:
       description: Изменение информации пользователя
       parameters:
         - in: body
-          name: body
+          userName: body
           description: изменяемый объект
           required: false
           schema:
@@ -160,12 +160,12 @@ paths:
       description: ""
       parameters:
         - in: query
-          name: name
+          userName: userName
           description: Имя пользователя/Логин
           required: false
           type: string
         - in: query
-          name: password
+          userName: password
           description: Пароль пользователя
           required: false
           type: string
@@ -184,42 +184,42 @@ paths:
      description: "Регистрация пользователя в системе. "
      parameters:
         - in: query
-          name: name
+          userName: userName
           description: Имя пользователя/Логин
           required: false
           type: string
         - in: query
-          name: email
+          userName: email
           description: email
           required: false
           type: string
         - in: query
-          name: city
+          userName: city
           description: город, в котором проживает пользователь
           required: false
           type: string
         - in: query
-          name: age
+          userName: age
           description: возвраст пользователя/ дата рождения
           required: false
           type: string
         - in: query
-          name: gender
+          userName: gender
           description: пол пользователя
           required: false
           type: string
         - in: query
-          name: snils
+          userName: snils
           description: snils пользователя
           required: false
           type: string
         - in: query
-          name: passportData
+          userName: passportData
           description: паспортные данные пользователя
           required: false
           type: string
         - in: query
-          name: password
+          userName: password
           description: Пароль пользователя
           required: false
           type: string
@@ -308,7 +308,7 @@ definitions:
       placeOfWork:
         type: string
         description: место работы участника
-      position:
+      positionAtWork:
         type: string
         description: должность участника
   User:
@@ -318,7 +318,7 @@ definitions:
         type: number
         format: int
         description: PK.
-      name:
+      userName:
         type: string
         description: Имя пользователя
       email:

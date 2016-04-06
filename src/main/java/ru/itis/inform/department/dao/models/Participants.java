@@ -11,7 +11,7 @@ public class Participants {
     private String fullName;
     private String education;
     private String placeOfWork;
-    private String position;
+    private String positionAtWork;
 
     public int getId() {
         return id;
@@ -33,8 +33,8 @@ public class Participants {
         return placeOfWork;
     }
 
-    public String getPosition() {
-        return position;
+    public String getPositionAtWork() {
+        return positionAtWork;
     }
 
     public void setId(int id) {
@@ -57,8 +57,8 @@ public class Participants {
         this.placeOfWork = placeOfWork;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setPositionAtWork(String positionAtWork) {
+        this.positionAtWork = positionAtWork;
     }
 
     @Override
@@ -69,7 +69,7 @@ public class Participants {
                 ", fullName='" + fullName + '\'' +
                 ", education='" + education + '\'' +
                 ", placeOfWork='" + placeOfWork + '\'' +
-                ", position='" + position + '\'' +
+                ", positionAtWork='" + positionAtWork + '\'' +
                 '}';
     }
 
@@ -82,14 +82,14 @@ public class Participants {
                 Objects.equals(this.getEducation(), that.getEducation()) &&
                 Objects.equals(this.getFullName(), that.getFullName()) &&
                 Objects.equals(this.getPlaceOfWork(), that.getPlaceOfWork()) &&
-                Objects.equals(this.getPosition(), that.getPosition());
+                Objects.equals(this.getPositionAtWork(), that.getPositionAtWork());
 
 
     }
     @Override
     public int hashCode(){
         return Objects.hash(this.getDocumentId(), this.getEducation(),
-                this.getFullName(), this.getPosition(),
+                this.getFullName(), this.getPositionAtWork(),
                 this.getId(), this.getPlaceOfWork());
     }
 }

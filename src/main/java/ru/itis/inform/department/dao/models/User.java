@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 public class User {
     private int id;
-    private String name;
+    private String userName;
     private String email;
     private String city;
     private String age;
@@ -21,8 +21,8 @@ public class User {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
     public String getEmail() {
@@ -53,8 +53,8 @@ public class User {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public void setEmail(String email) {
@@ -87,7 +87,7 @@ public class User {
             return false;
 
         User that = (User) obj;
-        return Objects.equals(this.getName(), that.getName()) &&
+        return Objects.equals(this.getUserName(), that.getUserName()) &&
                 Objects.equals(this.getEmail(), that.getEmail()) &&
                 Objects.equals(this.getAge(), that.getAge()) &&
                 Objects.equals(this.getCity(), that.getCity()) &&
@@ -99,7 +99,7 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.getId(), this.getName(), this.getAge(),
+        return Objects.hash(this.getId(), this.getUserName(), this.getAge(),
                 this.getCity(), this.getEmail(), this.getGender(),
                 this.getPassportData(), this.getSnils());
     }
@@ -109,7 +109,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", userName='" + userName + '\'' +
                 ", email='" + email + '\'' +
                 ", city='" + city + '\'' +
                 ", age='" + age + '\'' +
