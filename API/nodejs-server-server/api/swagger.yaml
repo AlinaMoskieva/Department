@@ -1,0 +1,362 @@
+---
+swagger: "2.0"
+info:
+  description: "Create documents online"
+  version: "1.0.0"
+  title: "Department"
+host: "api.department.com"
+basePath: "/v1"
+schemes:
+- "https"
+produces:
+- "application/json"
+paths:
+  /document/{document-id}/additional:
+    get:
+      tags:
+      - "Documents"
+      summary: "Просмотр приложения к документу"
+      description: "Просмотр списка участников"
+      operationId: "documentDocument_idAdditionalGET"
+      parameters:
+      - name: "document-id"
+        in: "path"
+        description: "id документа"
+        required: true
+        type: "number"
+        format: "int"
+      responses:
+        200:
+          description: "Запрос успешно обработан"
+          schema:
+            $ref: "#/definitions/Participants"
+        400:
+          description: "неверный id"
+        404:
+          description: "документ не найден"
+      x-swagger-router-controller: "Documents"
+    post:
+      tags:
+      - "Documents"
+      summary: "Добавление приложения к документу"
+      description: "Добавление списка участников"
+      operationId: "documentDocument_idAdditionalPOST"
+      parameters:
+      - name: "document-id"
+        in: "path"
+        description: "id документа"
+        required: true
+        type: "number"
+        format: "int"
+      - in: "body"
+        name: "body"
+        description: "Добавление объекта модели участников"
+        required: false
+        schema:
+          $ref: "#/definitions/Participant"
+      responses:
+        400:
+          description: "неверный id"
+        404:
+          description: "документ не найден"
+        405:
+          description: "Данные не верны"
+      x-swagger-router-controller: "Documents"
+  /document/{id}:
+    get:
+      tags:
+      - "Documents"
+      summary: "Просмотр документа"
+      description: "Cтраница отображающая содержимое документа"
+      operationId: "documentIdGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "id документа"
+        required: true
+        type: "number"
+        format: "int"
+      responses:
+        200:
+          description: "Запрос успешно обработан"
+          schema:
+            $ref: "#/definitions/Document"
+        400:
+          description: "неверный id"
+        404:
+          description: "документ не найден"
+      x-swagger-router-controller: "Documents"
+  /documents:
+    get:
+      tags:
+      - "Documents"
+      summary: "Листинг документов пользователя"
+      description: "Страница, содержащая листинг документов пользователя с возможн\
+        ость их просмотра и создания нового.\n"
+      operationId: "documentsGET"
+      parameters: []
+      responses:
+        200:
+          description: "Запрос успешно обработан"
+          schema:
+            $ref: "#/definitions/Documents"
+      x-swagger-router-controller: "Documents"
+    post:
+      tags:
+      - "Documents"
+      summary: "Новый документ"
+      description: "Создание нового документа"
+      operationId: "documentsPOST"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Добавление объекта модели Documents"
+        required: false
+        schema:
+          $ref: "#/definitions/Document"
+      responses:
+        405:
+          description: "Данные не верны"
+      x-swagger-router-controller: "Documents"
+  /login:
+    get:
+      tags:
+      - "User"
+      summary: "Вход пользователя в систему"
+      description: ""
+      operationId: "loginGET"
+      parameters:
+      - name: "name"
+        in: "query"
+        description: "Имя пользователя/Логин"
+        required: false
+        type: "string"
+      - name: "password"
+        in: "query"
+        description: "Пароль пользователя"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "Запрос успешно обработан"
+          schema:
+            type: "string"
+        400:
+          description: "Не верное имя пользовате или пароль"
+      x-swagger-router-controller: "User"
+  /logout:
+    get:
+      tags:
+      - "User"
+      summary: "Завершение сессии"
+      description: ""
+      operationId: "logoutGET"
+      parameters: []
+      responses:
+        default:
+          description: "Запрос успешно обработан"
+      x-swagger-router-controller: "User"
+  /profile:
+    get:
+      tags:
+      - "User"
+      summary: "User Profile"
+      description: "Страница пользователя"
+      operationId: "profileGET"
+      parameters: []
+      responses:
+        200:
+          description: "Запрос успешно обработан"
+          schema:
+            $ref: "#/definitions/User"
+        405:
+          description: "Данные не верны"
+      x-swagger-router-controller: "User"
+  /profile/update:
+    put:
+      tags:
+      - "User"
+      summary: "Изменение"
+      description: "Изменение информации пользователя"
+      operationId: "profileUpdatePUT"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "изменяемый объект"
+        required: false
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        400:
+          description: "Данные пользователя не верны"
+        404:
+          description: "Пользователь не найден"
+      x-swagger-router-controller: "User"
+  /signin:
+    post:
+      tags:
+      - "User"
+      summary: "Регистрация пользователя в системе"
+      description: "Регистрация пользователя в системе. "
+      operationId: "signinPOST"
+      parameters:
+      - name: "name"
+        in: "query"
+        description: "Имя пользователя/Логин"
+        required: false
+        type: "string"
+      - name: "email"
+        in: "query"
+        description: "email"
+        required: false
+        type: "string"
+      - name: "city"
+        in: "query"
+        description: "город, в котором проживает пользователь"
+        required: false
+        type: "string"
+      - name: "age"
+        in: "query"
+        description: "возвраст пользователя/ дата рождения"
+        required: false
+        type: "string"
+      - name: "gender"
+        in: "query"
+        description: "пол пользователя"
+        required: false
+        type: "string"
+      - name: "snils"
+        in: "query"
+        description: "snils пользователя"
+        required: false
+        type: "string"
+      - name: "passportData"
+        in: "query"
+        description: "паспортные данные пользователя"
+        required: false
+        type: "string"
+      - name: "password"
+        in: "query"
+        description: "Пароль пользователя"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "Запрос успешно обработан"
+          schema:
+            type: "string"
+        405:
+          description: "Данные не верны"
+      x-swagger-router-controller: "User"
+definitions:
+  Documents:
+    type: "array"
+    items:
+      $ref: "#/definitions/Document"
+  Document:
+    type: "object"
+    properties:
+      document_id:
+        type: "number"
+        format: "int"
+        description: "PK"
+      denominationOfApplicant:
+        type: "string"
+        description: "наименование заявителя"
+      legalStatusOfTheApplicant:
+        type: "string"
+        description: "правовой статус заявителя"
+      theTypeLaborArbitrators:
+        type: "string"
+        description: "Вид подготовки трудовых арбитров"
+      formOfThePreparationOfLaborArbitrators:
+        type: "string"
+        description: "форма подготовки трудовых арбитров"
+      timeOfThePreparationOfLaborArbitrators:
+        type: "string"
+        format: "date"
+        description: "Время прохождения подготовки трудовых арбитров"
+      preferredLocation:
+        type: "string"
+        description: "место прохождения подготовки"
+      mailingAddressOfTheApplicant:
+        type: "string"
+        description: "Почтовый адрес заявителя"
+      contactPhoneNumber:
+        type: "string"
+        description: "Контактный телефоны"
+      emailAddress:
+        type: "string"
+        description: "адрес электронной почты заявителя"
+      positionApplicant:
+        type: "string"
+        description: "Должность представителя заявителя"
+      fullName:
+        type: "string"
+        description: "имя пользователя"
+      date:
+        type: "string"
+        format: "data"
+        description: "дата подачи заявления"
+      idUser:
+        type: "number"
+        format: "int"
+        description: "id пользователя"
+  Participants:
+    type: "array"
+    items:
+      $ref: "#/definitions/Participant"
+  Participant:
+    type: "object"
+    properties:
+      participants_id:
+        type: "number"
+        format: "int"
+        description: "PK"
+      documentId:
+        type: "number"
+        format: "int"
+        description: "FK"
+      fullName:
+        type: "string"
+        description: "имя участника"
+      education:
+        type: "string"
+        description: "образование участника"
+      placeOfWork:
+        type: "string"
+        description: "место работы участника"
+      position:
+        type: "string"
+        description: "должность участника"
+  User:
+    type: "object"
+    properties:
+      id:
+        type: "number"
+        format: "int"
+        description: "PK."
+      name:
+        type: "string"
+        description: "Имя пользователя"
+      email:
+        type: "string"
+        description: "Email пользователя"
+      city:
+        type: "string"
+        description: "Город"
+      age:
+        type: "number"
+        format: "int32"
+        description: "Возвраст пользователя"
+      gender:
+        type: "string"
+        description: "Возвраст пользователя"
+      snils:
+        type: "number"
+        format: "int"
+        description: "СНИЛС"
+      passportData:
+        type: "number"
+        format: "int"
+        description: "паспортные данные"
