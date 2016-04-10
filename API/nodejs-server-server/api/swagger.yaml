@@ -157,28 +157,12 @@ paths:
           description: "Запрос успешно обработан"
       x-swagger-router-controller: "User"
   /profile:
-    get:
-      tags:
-      - "User"
-      summary: "User Profile"
-      description: "Страница пользователя"
-      operationId: "profileGET"
-      parameters: []
-      responses:
-        200:
-          description: "Запрос успешно обработан"
-          schema:
-            $ref: "#/definitions/User"
-        405:
-          description: "Данные не верны"
-      x-swagger-router-controller: "User"
-  /profile/update:
     put:
       tags:
       - "User"
       summary: "Изменение"
       description: "Изменение информации пользователя"
-      operationId: "profileUpdatePUT"
+      operationId: "profilePUT"
       parameters:
       - in: "body"
         name: "body"
