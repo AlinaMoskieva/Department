@@ -1,4 +1,4 @@
-package ru.itis.inform.department.dao;
+package ru.itis.inform.department.dao.participants;
 
 import ru.itis.inform.department.dao.models.Participants;
 
@@ -13,7 +13,7 @@ public interface ParticipantsDao {
      * @param userId id пользователя
      * @param documentId id документа
      */
-    void newListOfParticipants(int userId, int documentId);
+    // void newListOfParticipants(int userId, int documentId);
 
     /**
      * получение всех участников

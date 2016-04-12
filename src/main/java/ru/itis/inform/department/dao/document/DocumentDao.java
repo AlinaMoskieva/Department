@@ -1,4 +1,4 @@
-package ru.itis.inform.department.dao;
+package ru.itis.inform.department.dao.document;
 
 import ru.itis.inform.department.dao.models.Document;
 
@@ -8,10 +8,6 @@ import java.util.List;
  * Created by Moskieva on 29.03.16.
  */
 public interface DocumentDao {
-    /**
-     * создание документа
-     */
-    void newDocument();
 
     /**
      * получение всех документов поьзователя
@@ -26,11 +22,5 @@ public interface DocumentDao {
      * @return документ
      */
     Document getDocument (int documentId);
-
-    /**
-     * Удаление документа
-     * @param documentId id документа
-     */
-    void removeDocument (int documentId);
 
 }

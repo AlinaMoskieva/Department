@@ -16,6 +16,19 @@ public class User {
     private String passportData;
     private int snils;
 
+    public User(int id, String userName, String email, String city, String age, String gender, String passportData, int snils) {
+        this.id = id;
+        this.userName = userName;
+        this.email = email;
+        this.city = city;
+        this.age = age;
+        this.gender = gender;
+        this.passportData = passportData;
+        this.snils = snils;
+    }
+
+
+
 
     public int getId() {
         return id;

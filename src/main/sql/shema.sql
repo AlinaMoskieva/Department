@@ -1,5 +1,5 @@
 CREATE TABLE document (
-  id IDENTITY(1,1) PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   denominationOfApplicant VARCHAR(100),
   legalStatusOfTheApplicant VARCHAR(100),
   theTypeLaborArbitrators VARCHAR(100),
@@ -12,12 +12,13 @@ CREATE TABLE document (
   positionApplicant VARCHAR(100),
   fullName VARCHAR(100),
   date DATE,
+  userId INT,
 
-  FOREIGN KEY (userId) REFERENCES user(id)
+  FOREIGN KEY (userId) REFERENCES users(id)
 )
 
-CREATE TABLE user (
-  id IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
   userName VARCHAR (100),
   email VARCHAR (100),
   city VARCHAR (100),
@@ -27,10 +28,11 @@ CREATE TABLE user (
   snils int
 )
 CREATE TABLE participant (
-  id IDENTITY(1,1) PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   fullName VARCHAR (100),
   education VARCHAR (100),
   placeOfWork VARCHAR (100),
   positionAtWork VARCHAR (100),
+  documentId INT,
   FOREIGN KEY (documentId) REFERENCES document(id)
 )

@@ -11,6 +11,16 @@ public class Participants {
     private String fullName;
     private String education;
     private String placeOfWork;
+
+    public Participants(int id, int documentId, String fullName, String education, String placeOfWork, String positionAtWork) {
+        this.id = id;
+        this.documentId = documentId;
+        this.fullName = fullName;
+        this.education = education;
+        this.placeOfWork = placeOfWork;
+        this.positionAtWork = positionAtWork;
+    }
+
     private String positionAtWork;
 
     public int getId() {

@@ -19,6 +19,23 @@ public class Document {
     private String fullName; //
     private String date;
 
+    public Document(int id, int userId, String denominationOfApplicant, String legalStatusOfTheApplicant, String theTypeLaborArbitrators, String formOfThePreparationOfLaborArbitrators, String timeOfThePreparationOfLaborArbitrators, String preferredLocation, String mailingAddressOfTheApplicant, String contactPhoneNumbers, String emailAddress, String positionApplicant, String fullName, String date) {
+        this.id = id;
+        this.userId = userId;
+        this.denominationOfApplicant = denominationOfApplicant;
+        this.legalStatusOfTheApplicant = legalStatusOfTheApplicant;
+        this.theTypeLaborArbitrators = theTypeLaborArbitrators;
+        this.formOfThePreparationOfLaborArbitrators = formOfThePreparationOfLaborArbitrators;
+        this.timeOfThePreparationOfLaborArbitrators = timeOfThePreparationOfLaborArbitrators;
+        this.preferredLocation = preferredLocation;
+        this.mailingAddressOfTheApplicant = mailingAddressOfTheApplicant;
+        this.contactPhoneNumbers = contactPhoneNumbers;
+        this.emailAddress = emailAddress;
+        this.positionApplicant = positionApplicant;
+        this.fullName = fullName;
+        this.date = date;
+    }
+
     public int getId() {
         return id;
     }
