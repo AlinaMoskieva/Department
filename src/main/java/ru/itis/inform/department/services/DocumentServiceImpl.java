@@ -15,7 +15,6 @@ public class DocumentServiceImpl implements  DocumentService {
     @Autowired
     private DocumentDao documentDao;
 
-
     @Override
     public Document getDocumentsInformation(int documentId) {
         return documentDao.getDocument(documentId);

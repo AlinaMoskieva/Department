@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.WebSphereDataSourceAdapter;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -14,7 +15,7 @@ import java.net.URISyntaxException;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("ru.inis.inform")
+@ComponentScan("ru.itis.inform.department")
 public class WebAppContext extends WebMvcConfigurerAdapter {
     @Bean
     public DataSource dataSource() throws URISyntaxException {

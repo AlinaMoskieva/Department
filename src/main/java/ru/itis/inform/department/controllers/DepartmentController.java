@@ -30,4 +30,9 @@ public class DepartmentController {
     public List<Participants> getAdditionalToDocument(@PathVariable int documentId){
         return participantService.getListOfPArticipants(documentId);
     }
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String getHello(){
+        return "HELLO!";
+    }
+
 }

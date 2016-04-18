@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Component;
 
 import javax.activation.DataSource;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.Map;
 /**
  * Created by Moskieva on 09.04.16.
  */
+@Component
 public class SqlQueryExecutorImpl implements SqlQueryExecutor{
     JdbcTemplate jdbcTemplate;
     NamedParameterJdbcTemplate namedParameterJdbcTemplate;

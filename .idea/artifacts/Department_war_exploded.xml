@@ -29,6 +29,9 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.0.4.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">
