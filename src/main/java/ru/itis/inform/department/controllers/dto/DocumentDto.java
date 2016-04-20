@@ -44,5 +44,59 @@ public class DocumentDto{
 
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public int getUserId() {
+        return userId;
+    }
+
+    public String getDenominationOfApplicant() {
+        return denominationOfApplicant;
+    }
+
+    public String getLegalStatusOfTheApplicant() {
+        return legalStatusOfTheApplicant;
+    }
+
+    public String getFormOfThePreparationOfLaborArbitrators() {
+        return formOfThePreparationOfLaborArbitrators;
+    }
+
+    public String getTheTypeLaborArbitrators() {
+        return theTypeLaborArbitrators;
+    }
+
+    public String getTimeOfThePreparationOfLaborArbitrators() {
+        return timeOfThePreparationOfLaborArbitrators;
+    }
+
+    public String getMailingAddressOfTheApplicant() {
+        return mailingAddressOfTheApplicant;
+    }
+
+    public String getPreferredLocation() {
+        return preferredLocation;
+    }
+
+    public String getContactPhoneNumbers() {
+        return contactPhoneNumbers;
+    }
+
+    public String getPositionApplicant() {
+        return positionApplicant;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
 }
