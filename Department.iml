@@ -48,8 +48,10 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:4.0.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:4.0.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:4.0.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.inspire-software.lib.dto.geda:geda.core:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: javassist:javassist:3.8.0.GA" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.bcel:bcel:5.2" level="project" />
+    <orderEntry type="library" name="Maven: jakarta-regexp:jakarta-regexp:1.4" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.5.8" level="project" />
   </component>
 </module>

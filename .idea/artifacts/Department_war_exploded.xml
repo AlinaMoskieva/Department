@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="Department:war exploded">
-    <output-path>$PROJECT_DIR$/target/Department-1.0</output-path>
+    <output-path>$PROJECT_DIR$/target/Department-1</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -29,13 +29,15 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.0.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.0.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: com.inspire-software.lib.dto.geda:geda.core:3.0.0" />
+          <element id="library" level="project" name="Maven: javassist:javassist:3.8.0.GA" />
+          <element id="library" level="project" name="Maven: org.apache.bcel:bcel:5.2" />
+          <element id="library" level="project" name="Maven: jakarta-regexp:jakarta-regexp:1.4" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.5.8" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/Department-1.0/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/Department-1/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="Department/web/Web" />
     </root>

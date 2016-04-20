@@ -6,7 +6,7 @@
 
     <groupId>ru.itis.inform</groupId>
     <artifactId>Department</artifactId>
-    <version>1.0</version>
+    <version>1</version>
     <packaging>war</packaging>
 
     <dependencies>
@@ -97,21 +97,10 @@
             <artifactId>spring-aop</artifactId>
             <version>4.2.5.RELEASE</version>
         </dependency>
-        <!-- Spring Security -->
         <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-            <version>4.0.4.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>4.0.4.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>4.0.4.RELEASE</version>
+            <groupId>com.inspire-software.lib.dto.geda</groupId>
+            <artifactId>geda.core</artifactId>
+            <version>3.0.0</version>
         </dependency>
 
 </dependencies>
