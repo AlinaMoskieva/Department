@@ -14,9 +14,7 @@ import java.util.Map;
 
 import static java.util.Arrays.asList;
 
-/**
- * Created by Moskieva on 24.04.16.
- */
+
 public class PasswordsDaoImpl implements PasswordsDao {
     @Autowired
     ParamsMapper paramsMapper;
