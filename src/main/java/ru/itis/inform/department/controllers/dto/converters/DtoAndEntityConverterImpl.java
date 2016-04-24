@@ -1,9 +1,8 @@
 package ru.itis.inform.department.controllers.dto.converters;
 
 import ru.itis.inform.department.controllers.dto.*;
-import ru.itis.inform.department.dao.models.Document;
-import ru.itis.inform.department.dao.models.Participants;
-import ru.itis.inform.department.dao.models.User;
+import ru.itis.inform.department.dao.models.*;
+import sun.security.util.Password;
 
 import java.util.HashMap;
 import java.util.List;
@@ -35,6 +34,18 @@ public class DtoAndEntityConverterImpl implements DtoAndEntityConverter {
     }
 
     @Override
+    public PasswordDto getPasswordDto(Passwords entity) {
+        PasswordDto dto = new PasswordDto(entity);
+        return dto;
+    }
+
+    @Override
+    public TokenDto getTokenDto(Tokens entity) {
+        TokenDto dto = new TokenDto(entity);
+        return dto;
+    }
+
+    @Override
     public Map<String, Integer> getIdsAsIntegerMap() {
         return null;
     }
@@ -61,5 +72,17 @@ public class DtoAndEntityConverterImpl implements DtoAndEntityConverter {
         User user = new User(dto.getId(), dto.getUserName(), dto.getEmail(), dto.getCity(), dto.getAge(), dto.getGender(),
                 dto.getPassportData(), dto.getSnils());
         return user;
+    }
+
+    @Override
+    public Passwords getPasswordDao(PasswordDto dto) {
+        Passwords password = new Passwords(dto.getUserId(), dto.getLogin(), dto.getPassword());
+        return password;
+    }
+
+    @Override
+    public Tokens getTokensDto(TokenDto dto) {
+        Tokens token = new Tokens(dto.getUserId(), dto.getToken());
+        return token;
     }
 }
