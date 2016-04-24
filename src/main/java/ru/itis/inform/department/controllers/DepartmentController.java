@@ -5,9 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import ru.itis.inform.department.controllers.dto.DocumentDto;
 import ru.itis.inform.department.controllers.dto.ParticipantDto;
 import ru.itis.inform.department.controllers.dto.ParticipantsDto;
-import ru.itis.inform.department.dao.models.Document;
-import ru.itis.inform.department.dao.models.Participants;
-import ru.itis.inform.department.dao.models.User;
+import ru.itis.inform.department.controllers.dto.UserDto;
+import ru.itis.inform.department.controllers.dto.converters.DtoAndEntityConverter;
 import ru.itis.inform.department.services.DocumentService;
 import ru.itis.inform.department.services.ParticipantService;
 import ru.itis.inform.department.services.UsersService;
@@ -23,6 +22,8 @@ public class DepartmentController {
     private ParticipantService participantService;
     @Autowired
     private UsersService usersService;
+    @Autowired
+    private DtoAndEntityConverter converter;
 
     @RequestMapping(value = "/document/{id}", method = RequestMethod.GET)
     public DocumentDto getDocumentById(@PathVariable int id){
@@ -42,4 +43,14 @@ public class DepartmentController {
         return "HELLO!";
     }
 
-}//Token+user
+    @RequestMapping(value = "/signin", method = RequestMethod.POST)
+    public void addNewUser(@RequestBody UserDto dto){
+        usersService.addUser(converter.getUserDao(dto));
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public void login(){
+
+    }
+
+}

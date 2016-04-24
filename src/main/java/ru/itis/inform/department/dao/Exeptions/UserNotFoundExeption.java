@@ -1,4 +1,4 @@
-package ru.itis.inform.department.dao.Exeptions;
+package ru.itis.inform.department.dao.exeptions;
 
 /**
  * Created by Moskieva on 12.04.16.

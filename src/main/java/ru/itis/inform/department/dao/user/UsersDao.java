@@ -1,5 +1,6 @@
 package ru.itis.inform.department.dao.user;
 
+import ru.itis.inform.department.controllers.dto.UserDto;
 import ru.itis.inform.department.dao.models.User;
 
 /**
@@ -7,6 +8,8 @@ import ru.itis.inform.department.dao.models.User;
  */
 public interface UsersDao {
     User getUser(int userId);
+    String addUser(User user);
+
 
 
 }

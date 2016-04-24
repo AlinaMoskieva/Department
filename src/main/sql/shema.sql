@@ -36,3 +36,18 @@ CREATE TABLE participant (
   documentId INT,
   FOREIGN KEY (documentId) REFERENCES document(id)
 )
+
+CREATE TABLE tokens (
+  userId int,
+  token VARCHAR (100),
+
+  FOREIGN KEY (userId) REFERENCES  users(id)
+)
+
+CREATE TABLE passwords(
+  userId int,
+  login VARCHAR (100),
+  password VARCHAR (100),
+
+  FOREIGN  KEY (userId) REFERENCES users(id)
+)

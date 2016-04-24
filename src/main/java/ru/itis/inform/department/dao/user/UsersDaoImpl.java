@@ -3,6 +3,7 @@ package ru.itis.inform.department.dao.user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
+import ru.itis.inform.department.controllers.dto.UserDto;
 import ru.itis.inform.department.dao.DaoArgumentsVerifier;
 import ru.itis.inform.department.dao.jdbc.ParamsMapper;
 import ru.itis.inform.department.dao.jdbc.SqlQueryExecutor;
@@ -29,6 +30,8 @@ public class UsersDaoImpl implements UsersDao {
 
     // language=SQL
     public static final String SQL_GET_USER_BY_ID = "SELECT * FROM users WHERE (id = :userId) ";
+    // language=SQL
+    public static final String SQL_INSERT_USER_INTO_USERS="INSERT INTO users VALUES (:id, :userName, :email, :city, :age, :gender, :passportData, :snils)";
 
     static final RowMapper<User> USER_ROW_MAPPER = new RowMapper<User>() {
         @Override
@@ -48,6 +51,16 @@ public class UsersDaoImpl implements UsersDao {
         daoArgumentsVerifier.verifyUser(userId);
         Map<String, Object> paramMap = paramsMapper.asMap(asList("userId"), asList(userId));
         return sqlQueryExecutor.queryForObject(SQL_GET_USER_BY_ID, paramMap, USER_ROW_MAPPER);
+
+    }
+
+    @Override
+    public String addUser(User user) {
+        daoArgumentsVerifier.verifyUser(user.getId());
+        Map<String, Object> paramMap = paramsMapper.asMap(asList("id", "userName", "email", "city", "age", "gender", "passportData", "snils"),
+                asList(user.getId(),user.getUserName(), user.getEmail(),user.getCity(),user.getAge(),user.getGender(),user.getPassportData(),user.getSnils()));
+        sqlQueryExecutor.updateQuery(SQL_INSERT_USER_INTO_USERS, paramMap);
+
 
     }
 }

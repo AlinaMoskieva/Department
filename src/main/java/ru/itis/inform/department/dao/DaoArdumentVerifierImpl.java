@@ -3,9 +3,9 @@ package ru.itis.inform.department.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ru.itis.inform.department.dao.Exeptions.DocumentNotFoundExeption;
-import ru.itis.inform.department.dao.Exeptions.ParticipantNotFoundExeption;
-import ru.itis.inform.department.dao.Exeptions.UserNotFoundExeption;
+import ru.itis.inform.department.dao.exeptions.DocumentNotFoundExeption;
+import ru.itis.inform.department.dao.exeptions.ParticipantNotFoundExeption;
+import ru.itis.inform.department.dao.exeptions.UserNotFoundExeption;
 import ru.itis.inform.department.dao.jdbc.ParamsMapper;
 import ru.itis.inform.department.dao.jdbc.SqlQueryExecutor;
 

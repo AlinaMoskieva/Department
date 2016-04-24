@@ -7,7 +7,9 @@ import org.springframework.stereotype.Component;
 import ru.itis.inform.department.dao.DaoArgumentsVerifier;
 import ru.itis.inform.department.dao.document.DocumentDao;
 import ru.itis.inform.department.dao.jdbc.ParamsMapper;
+import ru.itis.inform.department.dao.jdbc.ParamsMapperImpl;
 import ru.itis.inform.department.dao.jdbc.SqlQueryExecutor;
+import ru.itis.inform.department.dao.jdbc.SqlQueryExecutorImpl;
 import ru.itis.inform.department.dao.models.Document;
 
 import java.sql.ResultSet;
@@ -25,9 +27,9 @@ public class DocumentDaoImpl implements DocumentDao {
     @Autowired
     DaoArgumentsVerifier daoArgumentsVerifier;
     @Autowired
-    ParamsMapper paramsMapper;
+    private  ParamsMapper paramsMapper;
     @Autowired
-    SqlQueryExecutor sqlQueryExecutor;
+    private SqlQueryExecutor sqlQueryExecutor;
 
     // language=SQL
     public static final String SQL_GET_DOCUMENT_BY_ID = "SELECT * FROM document WHERE (id = :documentId)";
@@ -69,5 +71,10 @@ public class DocumentDaoImpl implements DocumentDao {
         Map<String, Object> paramMap = paramsMapper.asMap(asList("documentId"), asList(documentId));
         return sqlQueryExecutor.queryForObject(SQL_GET_DOCUMENT_BY_ID, paramMap, DOCUMENT_ROW_MAPPER);
 
+    }
+
+    public static void main(String[] args) {
+        DocumentDaoImpl d = new DocumentDaoImpl();
+        System.out.println(d.getDocument(1).toString());
     }
 }
