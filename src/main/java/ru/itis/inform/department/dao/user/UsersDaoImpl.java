@@ -55,7 +55,7 @@ public class UsersDaoImpl implements UsersDao {
     }
 
     @Override
-    public String addUser(User user) {
+    public void addUser(User user) {
         daoArgumentsVerifier.verifyUser(user.getId());
         Map<String, Object> paramMap = paramsMapper.asMap(asList("id", "userName", "email", "city", "age", "gender", "passportData", "snils"),
                 asList(user.getId(),user.getUserName(), user.getEmail(),user.getCity(),user.getAge(),user.getGender(),user.getPassportData(),user.getSnils()));

@@ -8,7 +8,7 @@ import ru.itis.inform.department.dao.models.User;
  */
 public interface UsersDao {
     User getUser(int userId);
-    String addUser(User user);
+    void addUser(User user);
 
 
 

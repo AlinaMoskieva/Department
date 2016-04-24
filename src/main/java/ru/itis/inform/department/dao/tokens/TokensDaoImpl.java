@@ -3,6 +3,7 @@ package ru.itis.inform.department.dao.tokens;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 import ru.itis.inform.department.dao.exeptions.UserIdNotEqualsToPasswordUserId;
 import ru.itis.inform.department.dao.jdbc.ParamsMapper;
 import ru.itis.inform.department.dao.jdbc.SqlQueryExecutor;
@@ -19,6 +20,7 @@ import static java.util.Arrays.asList;
 /**
  * Created by Moskieva on 24.04.16.
  */
+@Component
 public class TokensDaoImpl implements TokensDao {
     @Autowired
     ParamsMapper paramsMapper;

@@ -2,6 +2,7 @@ package ru.itis.inform.department.dao.passwords;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 import ru.itis.inform.department.dao.DaoArgumentsVerifier;
 import ru.itis.inform.department.dao.jdbc.ParamsMapper;
 import ru.itis.inform.department.dao.jdbc.SqlQueryExecutor;
@@ -14,7 +15,7 @@ import java.util.Map;
 
 import static java.util.Arrays.asList;
 
-
+@Component
 public class PasswordsDaoImpl implements PasswordsDao {
     @Autowired
     ParamsMapper paramsMapper;
