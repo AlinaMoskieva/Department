@@ -21,7 +21,14 @@ public class TokensServiceImpl implements TokensService {
     }
 
     @Override
-    public Tokens getToken(int userId) {
-        return tokensDao.getToken(userId);
+    public String getToken(int userId) {
+        Tokens token = tokensDao.getToken(userId);
+        return token.getToken();
+    }
+
+    @Override
+    public String getToken(User user) {
+        Tokens token = tokensDao.getToken(user.getId());
+        return token.getToken();
     }
 }

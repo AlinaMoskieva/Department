@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70a0f6b7-f4fc-4fda-a5e1-f79e70601134" name="Default" comment="logging added">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/converters/DtoAndEntityConverter.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/converters/DtoAndEntityConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/converters/DtoAndEntityConverterImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/converters/DtoAndEntityConverterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensServiceImpl.java" />
     </list>
     <ignored path="Department.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,23 +103,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ParticipantsDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/ParticipantsDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-              <folding>
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#462#463#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DtoAndEntityConverterImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DtoAndEntityConverterImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/converters/DtoAndEntityConverterImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.96153843">
+            <state vertical-scroll-proportion="0.0">
               <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
               <folding />
             </state>
@@ -147,33 +135,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DepartmentController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DepartmentController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.8076923">
+              <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1855#1856#0" expanded="true" />
-                <element signature="e#1918#1919#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TokenDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/TokenDto.java">
+      <file leaf-file-name="TokensServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
               <folding>
-                <element signature="e#403#404#0" expanded="true" />
-                <element signature="e#444#445#0" expanded="true" />
-                <element signature="e#480#481#0" expanded="true" />
-                <element signature="e#512#513#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TokensDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1461509985000" expanded="true" signature="977:1020" placeholder="INSERT INTO tokens... " />
+                <marker date="1461509985000" expanded="true" signature="1107:1156" placeholder="SELECT token... tokens" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TokensDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TokensService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -201,19 +219,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Passwords.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/Passwords.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
-              <folding>
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserDto.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/UserDto.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -222,16 +227,6 @@
               <folding>
                 <element signature="e#780#781#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tokens.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/Tokens.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="14" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -288,26 +283,26 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/UsersService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/UsersServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java" />
         <option value="$PROJECT_DIR$/src/main/sql/shema.sql" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/Passwords.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/Tokens.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/passwords/PasswordsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/document/DocumentDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/exeptions/UserIdNotEqualsToPasswordUserId.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/user/UsersDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/user/UsersDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/passwords/PasswordsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/PasswordService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/PasswordServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/TokenDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/PasswordDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/converters/DtoAndEntityConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/converters/DtoAndEntityConverterImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -548,6 +543,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Department" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Department" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="department" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tokens" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1305,12 +1334,12 @@
       <workItem from="1461050301724" duration="4931000" />
       <workItem from="1461136798567" duration="4776000" />
       <workItem from="1461144373802" duration="2023000" />
-      <workItem from="1461433769825" duration="8493000" />
+      <workItem from="1461433769825" duration="9082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48834000" />
+    <option name="totallyTimeSpent" value="49423000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1704,7 +1733,7 @@
         <state vertical-scroll-proportion="0.25641027">
           <caret line="12" column="100" selection-start-line="12" selection-start-column="100" selection-end-line="12" selection-end-column="100" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1761,33 +1790,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/passwords/PasswordsDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="9" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1461509985000" expanded="true" signature="977:1020" placeholder="INSERT INTO tokens... " />
-            <marker date="1461509985000" expanded="true" signature="1107:1156" placeholder="SELECT token... tokens" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1829,42 +1836,6 @@
             <element signature="e#534#535#0" expanded="true" />
             <element signature="e#592#593#0" expanded="true" />
             <element signature="e#643#644#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1855#1856#0" expanded="true" />
-            <element signature="e#1918#1919#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1965,9 +1936,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/converters/DtoAndEntityConverterImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.96153843">
+        <state vertical-scroll-proportion="0.0">
           <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1461509985000" expanded="true" signature="977:1020" placeholder="INSERT INTO tokens... " />
+            <marker date="1461509985000" expanded="true" signature="1107:1156" placeholder="SELECT token... tokens" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8076923">
+          <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -9,5 +9,6 @@ import ru.itis.inform.department.dao.models.User;
  */
 public interface TokensService {
     void setToken(User user, Passwords password);
-    Tokens getToken(int userId);
+    String getToken(int userId);
+    String getToken(User user);
 }

@@ -2,14 +2,9 @@ package ru.itis.inform.department.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.itis.inform.department.controllers.dto.DocumentDto;
-import ru.itis.inform.department.controllers.dto.ParticipantDto;
-import ru.itis.inform.department.controllers.dto.ParticipantsDto;
-import ru.itis.inform.department.controllers.dto.UserDto;
+import ru.itis.inform.department.controllers.dto.*;
 import ru.itis.inform.department.controllers.dto.converters.DtoAndEntityConverter;
-import ru.itis.inform.department.services.DocumentService;
-import ru.itis.inform.department.services.ParticipantService;
-import ru.itis.inform.department.services.UsersService;
+import ru.itis.inform.department.services.*;
 
 import java.util.List;
 
@@ -22,6 +17,10 @@ public class DepartmentController {
     private ParticipantService participantService;
     @Autowired
     private UsersService usersService;
+    @Autowired
+    private TokensService tokensService;
+    @Autowired
+    private PasswordService passwordService;
     @Autowired
     private DtoAndEntityConverter converter;
 
@@ -44,8 +43,11 @@ public class DepartmentController {
     }
 
     @RequestMapping(value = "/signin", method = RequestMethod.POST)
-    public void addNewUser(@RequestBody UserDto dto){
+    public String addNewUser(@RequestBody UserDto dto, @RequestBody PasswordDto passwordDto){
         usersService.addUser(converter.getUserDao(dto));
+        passwordService.addKey(converter.getPasswordDao(passwordDto));
+        tokensService.setToken(converter.getUserDao(dto), converter.getPasswordDao(passwordDto));
+        return tokensService.getToken(converter.getUserDao(dto));
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
