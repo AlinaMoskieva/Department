@@ -12,6 +12,9 @@ import ru.itis.inform.department.dao.models.Participants;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
+
+import static java.util.Arrays.asList;
 
 /**
  * Created by Moskieva on 12.04.16.
@@ -27,6 +30,9 @@ public class ParticipantsDaoImpl implements ParticipantsDao {
 
     // language=SQL
     public static final String SQL_GET_LIST_OF_PARTICIPANTS = "SELECT * FROM participant WHERE (documentid = :documentId) ";
+    // language=SQL
+    public static  final String SQL_INSERT_PARTICIPANT_INTO_PARTICIPANTS =
+            "INSERT INTO participant VALUES (:id, :fullName, :education, :placeOfWork, :positionAtWork, :documentId)";
 
     static final RowMapper<Participants> PARTICIPANTS_ROW_MAPPER = new RowMapper<Participants>() {
         @Override
@@ -42,13 +48,21 @@ public class ParticipantsDaoImpl implements ParticipantsDao {
     };
 
     @Override
+    public void newParticipant(Participants participants) {
+        daoArgumentsVerifier.verifyDocument(participants.getDocumentId());
+        Map<String,Object> paramMap = paramsMapper.asMap(
+                asList("id", "fullName", "education", "placeOfWork",
+                        "positionAtWork", "documentId"),
+                asList(participants.getId(), participants.getFullName(), participants.getEducation(),
+                        participants.getPlaceOfWork(), participants.getPositionAtWork(), participants.getDocumentId()));
+        sqlQueryExecutor.updateQuery(SQL_INSERT_PARTICIPANT_INTO_PARTICIPANTS, paramMap);
+
+    }
+
+    @Override
     public List<Participants> getListOfParticipant(int documentId) {
         daoArgumentsVerifier.verifyDocument(documentId);
         return sqlQueryExecutor.queryForObjects(SQL_GET_LIST_OF_PARTICIPANTS, PARTICIPANTS_ROW_MAPPER);
     }
 
-    @Override
-    public void removeParticipants(int participantsId) {
-//TODO
-    }
 }

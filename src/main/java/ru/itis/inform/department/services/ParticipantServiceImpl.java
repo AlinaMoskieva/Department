@@ -19,4 +19,9 @@ public class ParticipantServiceImpl implements ParticipantService {
     public List<Participants> getListOfPArticipants(int documentId) {
         return participantsDao.getListOfParticipant(documentId);
     }
+
+    @Override
+    public void addParticipants(Participants participants) {
+        participantsDao.newParticipant(participants);
+    }
 }

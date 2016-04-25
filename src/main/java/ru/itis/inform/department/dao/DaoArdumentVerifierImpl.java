@@ -2,9 +2,11 @@ package ru.itis.inform.department.dao;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.task.TaskRejectedException;
 import org.springframework.stereotype.Component;
 import ru.itis.inform.department.dao.exeptions.DocumentNotFoundExeption;
 import ru.itis.inform.department.dao.exeptions.ParticipantNotFoundExeption;
+import ru.itis.inform.department.dao.exeptions.TokenNotFoundExeption;
 import ru.itis.inform.department.dao.exeptions.UserNotFoundExeption;
 import ru.itis.inform.department.dao.jdbc.ParamsMapper;
 import ru.itis.inform.department.dao.jdbc.SqlQueryExecutor;
@@ -24,7 +26,11 @@ public class DaoArdumentVerifierImpl implements DaoArgumentsVerifier {
             "SELECT COUNT(*) FROM document WHERE (id = :documentId)";
     //language=SQL
     private static final String SQL_COUNT_PARTICIPANTS_BY_ID =
-            "SELECT COUNT(*) FROM user WHERE (id = :participantId)";
+            "SELECT COUNT(*) FROM participant WHERE (id = :participantId)";
+    //language=SQL
+    private static final String SQL_COUNT_TOKENS_BY_ID=
+            "SELECT COUNT(*) FROM tokens WHERE (token = :token)";
+
 
     @Autowired
     private SqlQueryExecutor sqlQueryExecutor;
@@ -61,7 +67,14 @@ public class DaoArdumentVerifierImpl implements DaoArgumentsVerifier {
         if (participantCount != 1){
             throw new ParticipantNotFoundExeption(participantId);
         }
+    }
 
-
+    @Override
+    public void verifyToken(String token) {
+        Map<String, Object> paranMap = paramsMapper.asMap(asList("token"), asList(token));
+        int tokenCount = sqlQueryExecutor.queryForInt(SQL_COUNT_TOKENS_BY_ID,paranMap);
+        if (tokenCount != 1) {
+            throw new TokenNotFoundExeption(token);
+        }
     }
 }

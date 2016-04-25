@@ -11,4 +11,5 @@ public interface ParticipantService {
      * @param documentId
      */
     List<Participants> getListOfPArticipants(int documentId);
+    void addParticipants(Participants participants);
 }

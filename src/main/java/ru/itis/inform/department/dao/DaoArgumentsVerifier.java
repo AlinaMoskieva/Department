@@ -7,4 +7,5 @@ public interface DaoArgumentsVerifier {
     void verifyUser(int userId);
     void verifyDocument(int documentId);
     void verifyParticipants(int participantId);
+    void verifyToken(String token);
 }

@@ -35,6 +35,20 @@ public class DocumentDaoImpl implements DocumentDao {
     public static final String SQL_GET_DOCUMENT_BY_ID = "SELECT * FROM document WHERE (id = :documentId)";
     // language=SQL
     public static final String SQL_GET_LIST_OF_DOCUMENTS = "SELECT * FROM document WHERE (userid = :userId)";
+    // language=SQL
+    public static  final String SQL_INSERT_DOCUMENT_INTO_DOCUMENT ="INSERT INTO document VALUES (:id, :denominationOfApplicant," +
+            ":legalStatusOfTheApplicant," +
+            ":theTypeLaborArbitrators," +
+            ":formOfThePreparationOfLaborArbitrators," +
+            ":timeOfThePreparationOfLaborArbitrators," +
+            ":preferredLocation," +
+            ":mailingAddressOfTheApplicant," +
+            ":contactPhoneNumbers," +
+            ":emailAddress," +
+            ":positionApplicant," +
+            ":fullName," +
+            ":date," +
+            ":userId )";
 
 
 
@@ -71,6 +85,40 @@ public class DocumentDaoImpl implements DocumentDao {
         Map<String, Object> paramMap = paramsMapper.asMap(asList("documentId"), asList(documentId));
         return sqlQueryExecutor.queryForObject(SQL_GET_DOCUMENT_BY_ID, paramMap, DOCUMENT_ROW_MAPPER);
 
+    }
+
+    @Override
+    public void addDocument(Document document) {
+        Map<String, Object> paramMap = paramsMapper.asMap(asList("id",
+                "denominationOfApplicant",
+                "legalStatusOfTheApplicant",
+                "theTypeLaborArbitrators",
+                "formOfThePreparationOfLaborArbitrators",
+                "timeOfThePreparationOfLaborArbitrators",
+                "preferredLocation",
+                "mailingAddressOfTheApplicant",
+                "contactPhoneNumbers",
+                "emailAddress",
+                "positionApplicant",
+                "fullName",
+                "date",
+                "userId"),
+                asList(document.getId(),
+                        document.getDenominationOfApplicant(),
+                        document.getLegalStatusOfTheApplicant(),
+                        document.getTheTypeLaborArbitrators(),
+                        document.getFormOfThePreparationOfLaborArbitrators(),
+                        document.getTimeOfThePreparationOfLaborArbitrators(),
+                        document.getPreferredLocation(),
+                        document.getMailingAddressOfTheApplicant(),
+                        document.getContactPhoneNumbers(),
+                        document.getEmailAddress(),
+                        document.getPositionApplicant(),
+                        document.getFullName(),
+                        document.getDate(),
+                        document.getUserId()));
+
+        sqlQueryExecutor.updateQuery(SQL_INSERT_DOCUMENT_INTO_DOCUMENT, paramMap);
     }
 
     public static void main(String[] args) {

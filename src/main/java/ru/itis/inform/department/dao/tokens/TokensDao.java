@@ -10,4 +10,5 @@ import ru.itis.inform.department.dao.models.User;
 public interface TokensDao {
     void setToken(User user, Passwords password);
     Tokens getToken(int userId);
+    void vefifyToken(String token);
 }

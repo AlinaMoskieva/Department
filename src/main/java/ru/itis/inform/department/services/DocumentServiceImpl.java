@@ -24,4 +24,9 @@ public class DocumentServiceImpl implements  DocumentService {
     public List<Document> getListOfUserDocuments(int userId) {
         return documentDao.getListOfDocuments(userId);
     }
+
+    @Override
+    public void addDocument(Document document) {
+        documentDao.addDocument(document);
+    }
 }

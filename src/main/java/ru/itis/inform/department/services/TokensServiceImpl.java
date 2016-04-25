@@ -31,4 +31,11 @@ public class TokensServiceImpl implements TokensService {
         Tokens token = tokensDao.getToken(user.getId());
         return token.getToken();
     }
+
+    @Override
+    public void vefifyToken(String token) {
+        tokensDao.vefifyToken(token);
+
+    }
+
 }

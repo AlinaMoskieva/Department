@@ -23,4 +23,6 @@ public interface DocumentDao {
      */
     Document getDocument (int documentId);
 
+    void addDocument(Document document);
+
 }

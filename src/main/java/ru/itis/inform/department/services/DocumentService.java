@@ -21,4 +21,6 @@ public interface DocumentService {
      * @return лист документов
      */
     List<Document> getListOfUserDocuments (int userId);
+
+    void  addDocument(Document document);
 }

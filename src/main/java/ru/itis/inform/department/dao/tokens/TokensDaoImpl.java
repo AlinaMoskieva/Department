@@ -4,6 +4,7 @@ package ru.itis.inform.department.dao.tokens;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
+import ru.itis.inform.department.dao.DaoArgumentsVerifier;
 import ru.itis.inform.department.dao.exeptions.UserIdNotEqualsToPasswordUserId;
 import ru.itis.inform.department.dao.jdbc.ParamsMapper;
 import ru.itis.inform.department.dao.jdbc.SqlQueryExecutor;
@@ -26,6 +27,8 @@ public class TokensDaoImpl implements TokensDao {
     ParamsMapper paramsMapper;
     @Autowired
     SqlQueryExecutor sqlQueryExecutor;
+    @Autowired
+    DaoArgumentsVerifier daoArgumentsVerifier;
 
     // language=SQL
     public static final String SQL_INSERT_TOKENS_INFO_INTO_TOKENS = "INSERT INTO tokens VALUES (:userId, :token)";
@@ -61,4 +64,11 @@ public class TokensDaoImpl implements TokensDao {
         Map<String, Object> paramMap = paramsMapper.asMap(asList("userId"), asList(userId));
         return sqlQueryExecutor.queryForObject(SQL_SELECT_TOKEN_FROM_TOKENS,paramMap,TOKENS_ROW_MAPPER);
     }
+
+    @Override
+    public void vefifyToken(String token) {
+        daoArgumentsVerifier.verifyToken(token);
+
+    }
+
 }

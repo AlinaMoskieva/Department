@@ -8,12 +8,8 @@ import java.util.List;
  * Created by Moskieva on 06.04.16.
  */
 public interface ParticipantsDao {
-    /**
-     * добавление участника в приложение к документу
-     * @param userId id пользователя
-     * @param documentId id документа
-     */
-    // void newListOfParticipants(int userId, int documentId);
+
+     void newParticipant(Participants participants);
 
     /**
      * получение всех участников
@@ -21,12 +17,5 @@ public interface ParticipantsDao {
      * @return лист участников
      */
     List<Participants> getListOfParticipant(int documentId);
-
-
-    /**
-     * удаление участника
-     * @param participantsId id участника
-     */
-    void removeParticipants(int participantsId);
 
 }
