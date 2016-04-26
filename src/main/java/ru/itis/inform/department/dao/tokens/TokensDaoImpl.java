@@ -47,7 +47,7 @@ public class TokensDaoImpl implements TokensDao {
     };
     @Override
     public void setToken(User user, Passwords password) {
-        String token = "";
+        String token;
         if (user.getId() == password.getUserId()) {
             token = String.valueOf(user.hashCode() + password.hashCode());
 

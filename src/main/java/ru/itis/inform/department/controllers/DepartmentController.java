@@ -27,15 +27,15 @@ public class DepartmentController {
     private DtoAndEntityConverter converter;
 
     @RequestMapping(value = "/document/{id}", method = RequestMethod.GET)
-    public DocumentDto getDocumentById(@PathVariable int id, @RequestBody TokenDto tokenDto){
-        tokensService.vefifyToken(tokenDto.getToken());
+    public DocumentDto getDocumentById(@PathVariable int id, @RequestHeader(value = "Auth-Token") String token){
+        tokensService.vefifyToken(token);
         DocumentDto dto = new DocumentDto(documentService.getDocumentsInformation(id));
         return dto;
     }
 
     @RequestMapping(value = "/document/{documentId}/additional", method = RequestMethod.GET)
-    public List<ParticipantDto> getAdditionalToDocument(@PathVariable int documentId, @RequestBody TokenDto tokenDto){
-        tokensService.vefifyToken(tokenDto.getToken());
+    public List<ParticipantDto> getAdditionalToDocument(@PathVariable int documentId,@RequestHeader(value = "Auth-Token") String token){
+        tokensService.vefifyToken(token);
         ParticipantsDto dto = new ParticipantsDto();
         dto.setListParticipants(participantService.getListOfPArticipants(documentId));
 
@@ -55,24 +55,25 @@ public class DepartmentController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public void login( @RequestBody TokenDto tokenDto){
-        tokensService.vefifyToken(tokenDto.getToken());
+    public void login(@RequestHeader(value = "Auth-Token") String token){
+        tokensService.vefifyToken(token);
     }
     @RequestMapping(value = "/documents", method = RequestMethod.POST)
-    public void addNewDocument(@RequestBody DocumentDto dto, @RequestBody TokenDto tokenDto){
-        tokensService.vefifyToken(tokenDto.getToken());
+    public void addNewDocument(@RequestBody DocumentDto dto, @RequestHeader(value = "Auth-Token") String token){
+        tokensService.vefifyToken(token);
         documentService.addDocument(converter.getDocumentDao(dto));
 
     }
     @RequestMapping(value = "/document/{documentId}/additional", method = RequestMethod.POST)
-    public void addNewAdditional(@RequestBody ParticipantDto dto, @RequestBody TokenDto tokenDto){
-        tokensService.vefifyToken(tokenDto.getToken());
+    public void addNewAdditional(@RequestBody ParticipantDto dto, @RequestHeader(value = "Auth-Token") String token){
+        tokensService.vefifyToken(token);
         participantService.addParticipants(converter.getParticipantDao(dto));
     }
+    // add DocumentsDto
     @RequestMapping(value = "/documents", method = RequestMethod.GET)
-    public DocumentsDto getListing(@RequestBody TokenDto tokenDto){
-        tokensService.vefifyToken(tokenDto.getToken());
-        return converter.getDocumentsDto(documentService.getListOfUserDocuments(tokenDto.getUserId()));
+    public void getListing(@RequestHeader(value = "Auth-Token") String token){
+        tokensService.vefifyToken(token);
+      //  return converter.getDocumentsDto(documentService.getListOfUserDocuments(tokenDto.getUserId()));
 
     }
 }

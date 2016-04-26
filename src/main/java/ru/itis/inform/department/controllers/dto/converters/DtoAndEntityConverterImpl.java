@@ -1,5 +1,6 @@
 package ru.itis.inform.department.controllers.dto.converters;
 
+import org.springframework.stereotype.Component;
 import ru.itis.inform.department.controllers.dto.*;
 import ru.itis.inform.department.dao.models.*;
 import sun.security.util.Password;
@@ -11,6 +12,7 @@ import java.util.Map;
 /**
  * Created by Moskieva on 19.04.16.
  */
+@Component
 public class DtoAndEntityConverterImpl implements DtoAndEntityConverter {
 
     @Override
