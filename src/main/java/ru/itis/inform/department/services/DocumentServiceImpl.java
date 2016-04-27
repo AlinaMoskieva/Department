@@ -29,4 +29,9 @@ public class DocumentServiceImpl implements  DocumentService {
     public void addDocument(Document document) {
         documentDao.addDocument(document);
     }
+
+    public static void main(String[] args) {
+        DocumentServiceImpl impl = new DocumentServiceImpl();
+        System.out.println(impl.getDocumentsInformation(1).toString());
+    }
 }

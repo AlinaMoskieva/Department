@@ -1,10 +1,8 @@
 package ru.itis.inform.department;
 
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-@Component
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 

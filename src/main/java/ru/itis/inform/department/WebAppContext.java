@@ -13,7 +13,7 @@ import java.net.URISyntaxException;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("ru.itis.inform.department")
+@ComponentScan(value = {"ru.itis.inform.department", "ru.itis.inform.department.controllers.dto.converters"})
 public class WebAppContext extends WebMvcConfigurerAdapter {
     @Bean
     public DataSource dataSource() throws URISyntaxException {
@@ -26,6 +26,7 @@ public class WebAppContext extends WebMvcConfigurerAdapter {
         dataSource.setUrl(dbUrlL);
         dataSource.setUsername(userName);
         dataSource.setPassword(password);
+        dataSource.setDriverClassName("org.postgresql.Driver");
 
         return dataSource;
 

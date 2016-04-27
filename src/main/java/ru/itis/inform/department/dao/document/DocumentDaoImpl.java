@@ -12,6 +12,7 @@ import ru.itis.inform.department.dao.jdbc.SqlQueryExecutor;
 import ru.itis.inform.department.dao.jdbc.SqlQueryExecutorImpl;
 import ru.itis.inform.department.dao.models.Document;
 
+import java.io.Console;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -75,6 +76,7 @@ public class DocumentDaoImpl implements DocumentDao {
     public List<Document> getListOfDocuments(int userId) {
         daoArgumentsVerifier.verifyUser(userId);
         Map<String, Object> paramMap = paramsMapper.asMap(asList("userId"), asList(userId));
+
         return sqlQueryExecutor.queryForObjects(SQL_GET_LIST_OF_DOCUMENTS, paramMap, DOCUMENT_ROW_MAPPER);
 
     }
@@ -83,6 +85,7 @@ public class DocumentDaoImpl implements DocumentDao {
     public Document getDocument(int documentId) {
         daoArgumentsVerifier.verifyDocument(documentId);
         Map<String, Object> paramMap = paramsMapper.asMap(asList("documentId"), asList(documentId));
+        System.out.println(paramMap.get("documentId"));
         return sqlQueryExecutor.queryForObject(SQL_GET_DOCUMENT_BY_ID, paramMap, DOCUMENT_ROW_MAPPER);
 
     }
@@ -119,10 +122,5 @@ public class DocumentDaoImpl implements DocumentDao {
                         document.getUserId()));
 
         sqlQueryExecutor.updateQuery(SQL_INSERT_DOCUMENT_INTO_DOCUMENT, paramMap);
-    }
-
-    public static void main(String[] args) {
-        DocumentDaoImpl d = new DocumentDaoImpl();
-        System.out.println(d.getDocument(1).toString());
     }
 }
