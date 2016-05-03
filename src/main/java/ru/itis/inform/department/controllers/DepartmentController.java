@@ -76,7 +76,7 @@ public class DepartmentController {
         tokensService.vefifyToken(token);
         participantService.addParticipants(converter.getParticipantDao(dto));
     }
-    // working but DocumentsDto
+    // working
     @RequestMapping(value = "/documents", method = RequestMethod.GET)
     public DocumentsDto getListing(@RequestHeader(value = "Auth-Token") String token){
         tokensService.vefifyToken(token);

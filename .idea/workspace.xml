@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70a0f6b7-f4fc-4fda-a5e1-f79e70601134" name="Default" comment="logging added">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Department-1.3.war" afterPath="$PROJECT_DIR$/target/Department-1.3.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Department-1.3/WEB-INF/classes/ru/itis/inform/department/controllers/DepartmentController.class" afterPath="$PROJECT_DIR$/target/Department-1.3/WEB-INF/classes/ru/itis/inform/department/controllers/DepartmentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Department-1.3/WEB-INF/classes/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.class" afterPath="$PROJECT_DIR$/target/Department-1.3/WEB-INF/classes/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/controllers/DepartmentController.class" afterPath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/controllers/DepartmentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/ParticipantsDto.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/ParticipantsDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/DaoArdumentVerifierImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/DaoArdumentVerifierImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDao.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="Department.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,6 +80,28 @@
         <option name="myItemId" value="public" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="participant" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - department@localhost [2]" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -115,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/document/DocumentDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+              <caret line="80" column="0" selection-start-line="76" selection-start-column="8" selection-end-line="80" selection-end-column="0" />
               <folding>
                 <marker date="1461661862000" expanded="true" signature="1156:1203" placeholder="SELECT * FRO... document" />
                 <marker date="1461661862000" expanded="true" signature="1286:1333" placeholder="SELECT * FRO... document" />
@@ -130,13 +139,37 @@
       <file leaf-file-name="DepartmentController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1820128">
-              <caret line="82" column="124" selection-start-line="82" selection-start-column="124" selection-end-line="82" selection-end-column="124" />
+            <state vertical-scroll-proportion="0.70021415">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1913#1914#0" expanded="true" />
                 <element signature="e#1944#1945#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParticipantsDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+              <folding>
+                <marker date="1462295770000" expanded="true" signature="1070:1084" placeholder="SELECT * FRO... participant" />
+                <marker date="1462295770000" expanded="true" signature="1070:1128" placeholder="SELECT * FRO... participant" />
+                <marker date="1462295770000" expanded="true" signature="1239:1342" placeholder="INSERT INTO participant... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParticipantsDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -202,16 +235,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TokensService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TokensDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -222,16 +245,6 @@
                 <marker date="1462294723000" expanded="true" signature="1278:1327" placeholder="SELECT token... tokens" />
                 <marker date="1462294723000" expanded="true" signature="1412:1455" placeholder="SELECT * FRO... tokens" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DaoArgumentsVerifier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/DaoArgumentsVerifier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -255,7 +268,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response49.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response53.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -304,13 +317,13 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/ParticipantService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/ParticipantServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/ParticipantsDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/TokensServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/DaoArdumentVerifierImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -781,6 +794,30 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8081" />
+          <option name="urlPath" value="/Department-1.3//document/1/additional" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Auth-Token" />
+                <option name="value" value="4" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8081" />
@@ -1955,12 +1992,12 @@
       <workItem from="1461655347000" duration="6648000" />
       <workItem from="1461740085618" duration="2119000" />
       <workItem from="1461745865950" duration="92000" />
-      <workItem from="1462170872029" duration="6291000" />
+      <workItem from="1462170872029" duration="6739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71445000" />
+    <option name="totallyTimeSpent" value="71893000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -2152,13 +2189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2377,17 +2407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding>
-            <marker date="1462293689000" expanded="true" signature="1070:1095" placeholder="SELECT * FRO... participant" />
-            <marker date="1462293689000" expanded="true" signature="1207:1310" placeholder="INSERT INTO participant... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2475,10 +2494,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/document/DocumentDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <caret line="80" column="0" selection-start-line="76" selection-start-column="8" selection-end-line="80" selection-end-column="0" />
           <folding>
             <marker date="1461661862000" expanded="true" signature="1156:1203" placeholder="SELECT * FRO... document" />
             <marker date="1461661862000" expanded="true" signature="1286:1333" placeholder="SELECT * FRO... document" />
@@ -2489,10 +2516,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+          <folding>
+            <marker date="1462295770000" expanded="true" signature="1070:1084" placeholder="SELECT * FRO... participant" />
+            <marker date="1462295770000" expanded="true" signature="1070:1128" placeholder="SELECT * FRO... participant" />
+            <marker date="1462295770000" expanded="true" signature="1239:1342" placeholder="INSERT INTO participant... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1820128">
-          <caret line="82" column="124" selection-start-line="82" selection-start-column="124" selection-end-line="82" selection-end-column="124" />
+        <state vertical-scroll-proportion="0.70021415">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1913#1914#0" expanded="true" />

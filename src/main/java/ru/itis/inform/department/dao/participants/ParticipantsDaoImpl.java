@@ -30,7 +30,7 @@ public class ParticipantsDaoImpl implements ParticipantsDao {
     // have question about it
     //TODO ask Marser about WHERE
     // language=SQL
-    public static final String SQL_GET_LIST_OF_PARTICIPANTS = "SELECT * FROM participant ";
+    public static final String SQL_GET_LIST_OF_PARTICIPANTS = "SELECT * FROM participant WHERE (documentid = :documentId)";
     // language=SQL
     public static  final String SQL_INSERT_PARTICIPANT_INTO_PARTICIPANTS =
             "INSERT INTO participant VALUES (:id, :fullName, :education, :placeOfWork, :positionAtWork, :documentId)";
@@ -62,9 +62,9 @@ public class ParticipantsDaoImpl implements ParticipantsDao {
 
     @Override
     public List<Participants> getListOfParticipant(int documentId) {
-       // daoArgumentsVerifier.verifyDocument(documentId);
-        //Map<String, Object> paramMap = paramsMapper.asMap(asList("documentId"), asList(documentId));
-        return sqlQueryExecutor.queryForObjects(SQL_GET_LIST_OF_PARTICIPANTS, PARTICIPANTS_ROW_MAPPER );
+        Map<String, Object> paramMap = paramsMapper.asMap(asList("documentId"), asList(documentId));
+
+        return sqlQueryExecutor.queryForObjects(SQL_GET_LIST_OF_PARTICIPANTS, paramMap, PARTICIPANTS_ROW_MAPPER);
     }
 
 }
