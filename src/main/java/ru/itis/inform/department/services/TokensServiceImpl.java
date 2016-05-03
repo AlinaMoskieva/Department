@@ -38,4 +38,9 @@ public class TokensServiceImpl implements TokensService {
 
     }
 
+    @Override
+    public Tokens getUser(String token) {
+       return tokensDao.getUser(token);
+    }
+
 }

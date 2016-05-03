@@ -20,7 +20,7 @@ import static java.util.Arrays.asList;
 public class DaoArdumentVerifierImpl implements DaoArgumentsVerifier {
     //language=SQL
     private static final String SQL_COUNT_USER_BY_ID =
-            "SELECT COUNT(*) FROM user WHERE (id = :userId)";
+            "SELECT COUNT(*) FROM users WHERE (id = :userId)";
     //language=SQL
     private static final String SQL_COUNT_DOCUMENT_BY_ID =
             "SELECT COUNT(*) FROM document WHERE (id = :documentId)";

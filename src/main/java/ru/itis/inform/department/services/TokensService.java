@@ -12,4 +12,5 @@ public interface TokensService {
     String getToken(int userId);
     String getToken(User user);
     void vefifyToken(String token);
+    Tokens getUser(String token);
 }

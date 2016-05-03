@@ -3,13 +3,14 @@ package ru.itis.inform.department.controllers.dto;
 
 import ru.itis.inform.department.dao.models.Participants;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Moskieva on 19.04.16.
  */
 public class ParticipantsDto {
-    private List<ParticipantDto> participants;
+    private List<ParticipantDto> participants = new ArrayList<ParticipantDto>();
 
     public List<ParticipantDto> getParticipants() {
         return participants;
@@ -20,7 +21,7 @@ public class ParticipantsDto {
     }
     public void setListParticipants (List<Participants> participants){
         if (!participants.isEmpty()){
-            for (int i = 0; i<participants.size(); i++){
+            for (int i = 0; i < participants.size(); i++){
                 ParticipantDto dto = new ParticipantDto(participants.get(i));
                 this.participants.add(dto);
 

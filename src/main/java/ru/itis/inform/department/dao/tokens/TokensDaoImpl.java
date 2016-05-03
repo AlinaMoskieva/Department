@@ -1,6 +1,7 @@
 package ru.itis.inform.department.dao.tokens;
 
 
+import com.sun.javafx.fxml.expression.Expression;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -34,6 +35,8 @@ public class TokensDaoImpl implements TokensDao {
     public static final String SQL_INSERT_TOKENS_INFO_INTO_TOKENS = "INSERT INTO tokens VALUES (:userId, :token)";
     // language=SQL
     public static  final String SQL_SELECT_TOKEN_FROM_TOKENS = "SELECT token FROM tokens WHERE (userid = :userId)";
+    // language=SQL
+    public static final String SQL_SELECT_USER_FROM_TOKENS = "SELECT * FROM tokens WHERE (token = :token)";
 
     static final RowMapper<Tokens> TOKENS_ROW_MAPPER = new RowMapper<Tokens>() {
         @Override
@@ -69,6 +72,12 @@ public class TokensDaoImpl implements TokensDao {
     public void vefifyToken(String token) {
         daoArgumentsVerifier.verifyToken(token);
 
+    }
+
+    @Override
+    public Tokens getUser(String token) {
+        Map<String, Object> paramMap = paramsMapper.asMap(asList("token"), asList(token));
+        return sqlQueryExecutor.queryForObject(SQL_SELECT_USER_FROM_TOKENS,paramMap,TOKENS_ROW_MAPPER);
     }
 
 }

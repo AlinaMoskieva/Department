@@ -27,9 +27,10 @@ public class ParticipantsDaoImpl implements ParticipantsDao {
     ParamsMapper paramsMapper;
     @Autowired
     SqlQueryExecutor sqlQueryExecutor;
-
+    // have question about it
+    //TODO ask Marser about WHERE
     // language=SQL
-    public static final String SQL_GET_LIST_OF_PARTICIPANTS = "SELECT * FROM participant WHERE (documentid = :documentId) ";
+    public static final String SQL_GET_LIST_OF_PARTICIPANTS = "SELECT * FROM participant ";
     // language=SQL
     public static  final String SQL_INSERT_PARTICIPANT_INTO_PARTICIPANTS =
             "INSERT INTO participant VALUES (:id, :fullName, :education, :placeOfWork, :positionAtWork, :documentId)";
@@ -61,8 +62,9 @@ public class ParticipantsDaoImpl implements ParticipantsDao {
 
     @Override
     public List<Participants> getListOfParticipant(int documentId) {
-        daoArgumentsVerifier.verifyDocument(documentId);
-        return sqlQueryExecutor.queryForObjects(SQL_GET_LIST_OF_PARTICIPANTS, PARTICIPANTS_ROW_MAPPER);
+       // daoArgumentsVerifier.verifyDocument(documentId);
+        //Map<String, Object> paramMap = paramsMapper.asMap(asList("documentId"), asList(documentId));
+        return sqlQueryExecutor.queryForObjects(SQL_GET_LIST_OF_PARTICIPANTS, PARTICIPANTS_ROW_MAPPER );
     }
 
 }

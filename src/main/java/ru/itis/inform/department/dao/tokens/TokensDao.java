@@ -11,4 +11,5 @@ public interface TokensDao {
     void setToken(User user, Passwords password);
     Tokens getToken(int userId);
     void vefifyToken(String token);
+    Tokens getUser(String token);
 }

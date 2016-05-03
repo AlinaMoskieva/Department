@@ -26,6 +26,8 @@ public class DepartmentController {
     @Autowired
     private DtoAndEntityConverter converter;
 
+
+    // working
     @RequestMapping(value = "/document/{id}", method = RequestMethod.GET)
     public String getDocumentById(@PathVariable(value = "id") int id, @RequestHeader(value = "Auth-Token") String token){
         //tokensService.vefifyToken(token);
@@ -33,6 +35,8 @@ public class DepartmentController {
         return documentService.getDocumentsInformation(id).toString();
     }
 
+
+    // working
     @RequestMapping(value = "/document/{documentId}/additional", method = RequestMethod.GET)
     public List<ParticipantDto> getAdditionalToDocument(@PathVariable(value = "documentId") int documentId,@RequestHeader(value = "Auth-Token") String token){
         tokensService.vefifyToken(token);
@@ -41,6 +45,7 @@ public class DepartmentController {
 
         return dto.getParticipants();
     }
+    //working
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String getHello(){
         return "HELLO!";
@@ -54,6 +59,7 @@ public class DepartmentController {
         return tokensService.getToken(converter.getUserDao(dto));
     }
 
+    //working
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public void login(@RequestHeader(value = "Auth-Token") String token){
         tokensService.vefifyToken(token);
@@ -70,11 +76,11 @@ public class DepartmentController {
         tokensService.vefifyToken(token);
         participantService.addParticipants(converter.getParticipantDao(dto));
     }
-    // add DocumentsDto
+    // working but DocumentsDto
     @RequestMapping(value = "/documents", method = RequestMethod.GET)
-    public void getListing(@RequestHeader(value = "Auth-Token") String token){
+    public DocumentsDto getListing(@RequestHeader(value = "Auth-Token") String token){
         tokensService.vefifyToken(token);
-      //  return converter.getDocumentsDto(documentService.getListOfUserDocuments(tokenDto.getUserId()));
+        return  converter.getDocumentsDto(documentService.getListOfUserDocuments(tokensService.getUser(token).getUserId()));
 
     }
 }
