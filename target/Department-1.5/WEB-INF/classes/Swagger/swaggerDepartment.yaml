@@ -1,0 +1,345 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: Department
+  description: Create documents online
+  version: "1.0.0"
+# the domain of the service
+host: api.department.com
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: /v1
+produces:
+  - application/json
+paths:
+  /documents:
+    get:
+      summary: Листинг документов пользователя
+      description: |
+       Страница, содержащая листинг документов пользователя с возможность их просмотра и создания нового.
+      tags:
+        - Documents
+      responses:
+        200:
+          description: Запрос успешно обработан
+          schema:
+            $ref: '#/definitions/Documents'
+    post:
+      summary: Новый документ
+      description: Создание нового документа
+      parameters:
+       - in: body
+         userName: body
+         description: Добавление объекта модели Documents
+         required: false
+         schema:
+           $ref: "#/definitions/Document"
+      tags:
+        - Documents
+      responses:
+        405:
+          description: Данные не верны
+  /document/{id}:
+    get:
+      summary: Просмотр документа
+      description: Cтраница отображающая содержимое документа
+      parameters:
+      - userName: id
+        in: path
+        description: id документа
+        required: true
+        type: number
+        format: int
+      tags:
+        - Documents
+      responses:
+        200:
+          description: Запрос успешно обработан
+          schema:
+            $ref: '#/definitions/Document'
+        400:
+          description: неверный id
+        404:
+          description: документ не найден
+  /document/{document-id}/additional:
+    get:
+      tags:
+      - Documents
+      summary: Просмотр приложения к документу
+      description: Просмотр списка участников
+      parameters:
+      - userName: document-id
+        in: path
+        description: id документа
+        required: true
+        type: number
+        format: int
+      responses:
+        200:
+          description: Запрос успешно обработан
+          schema:
+            $ref: '#/definitions/Participants'
+        400:
+          description: неверный id
+        404:
+          description: документ не найден
+    post:
+      tags:
+      - Documents
+      summary: Добавление приложения к документу
+      description: Добавление списка участников
+      parameters:
+       - userName: document-id
+         in: path
+         description: id документа
+         required: true
+         type: number
+         format: int
+       - in: body
+         userName: body
+         description: Добавление объекта модели участников
+         required: false
+         schema:
+           $ref: "#/definitions/Participant"
+
+      responses:
+        405:
+          description: Данные не верны
+        400:
+          description: неверный id
+        404:
+          description: документ не найден
+  /profile:
+    get:
+      summary: User Profile
+      description: Страница пользователя
+      tags:
+        - User
+      responses:
+       "200":
+          description: Запрос успешно обработан
+          schema:
+            $ref: "#/definitions/User"
+       "405":
+          description: Данные не верны
+  /profile/update:
+    put:
+      tags:
+        - User
+      summary: Изменение
+      description: Изменение информации пользователя
+      parameters:
+        - in: body
+          userName: body
+          description: изменяемый объект
+          required: false
+          schema:
+            $ref: "#/definitions/User"
+      responses:
+        "404":
+          description: Пользователь не найден
+        "400":
+          description: Данные пользователя не верны
+  /logout:
+    get:
+      tags:
+        - User
+      summary: Завершение сессии
+      description: ""
+      responses:
+        default:
+          description: Запрос успешно обработан
+  /login:
+    get:
+      tags:
+        - User
+      summary: Вход пользователя в систему
+      description: ""
+      parameters:
+        - in: query
+          userName: userName
+          description: Имя пользователя/Логин
+          required: false
+          type: string
+        - in: query
+          userName: password
+          description: Пароль пользователя
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Запрос успешно обработан
+          schema:
+            type: string
+        "400":
+          description: Не верное имя пользовате или пароль
+  /signin:
+    post:
+     tags:
+      - User
+     summary: Регистрация пользователя в системе
+     description: "Регистрация пользователя в системе. "
+     parameters:
+        - in: query
+          userName: userName
+          description: Имя пользователя/Логин
+          required: false
+          type: string
+        - in: query
+          userName: email
+          description: email
+          required: false
+          type: string
+        - in: query
+          userName: city
+          description: город, в котором проживает пользователь
+          required: false
+          type: string
+        - in: query
+          userName: age
+          description: возвраст пользователя/ дата рождения
+          required: false
+          type: string
+        - in: query
+          userName: gender
+          description: пол пользователя
+          required: false
+          type: string
+        - in: query
+          userName: snils
+          description: snils пользователя
+          required: false
+          type: string
+        - in: query
+          userName: passportData
+          description: паспортные данные пользователя
+          required: false
+          type: string
+        - in: query
+          userName: password
+          description: Пароль пользователя
+          required: false
+          type: string
+     responses:
+        "200":
+          description: Запрос успешно обработан
+          schema:
+            type: string
+        "405":
+          description: Данные не верны
+definitions:
+  Documents:
+    type: array
+    items:
+      $ref: "#/definitions/Document"
+  Document:
+    type: object
+    properties:
+      document_id:
+        type: number
+        format: int
+        description: PK
+      denominationOfApplicant:
+        description: наименование заявителя
+        type: string
+      legalStatusOfTheApplicant:
+        description: правовой статус заявителя
+        type: string
+      theTypeLaborArbitrators:
+        description: Вид подготовки трудовых арбитров
+        type: string
+      formOfThePreparationOfLaborArbitrators:
+        description: форма подготовки трудовых арбитров
+        type: string
+      timeOfThePreparationOfLaborArbitrators:
+        description: Время прохождения подготовки трудовых арбитров
+        type: string
+        format: date
+      preferredLocation:
+        description: место прохождения подготовки
+        type: string
+      mailingAddressOfTheApplicant:
+        description: Почтовый адрес заявителя
+        type: string
+      contactPhoneNumber:
+        description: Контактный телефоны
+        type: string
+      emailAddress:
+        description: адрес электронной почты заявителя
+        type: string
+      positionApplicant:
+        description: Должность представителя заявителя
+        type: string
+      fullName:
+        description: имя пользователя
+        type: string
+      date:
+        description: дата подачи заявления
+        type: string
+        format: data
+      idUser:
+       description: id пользователя
+       type: number
+       format: int
+  Participants:
+    type: array
+    items:
+      $ref: "#/definitions/Participant"
+  Participant:
+    type: object
+    properties:
+      participants_id:
+        type: number
+        format: int
+        description: PK
+      documentId:
+        type: number
+        format: int
+        description: FK
+      fullName:
+        type: string
+        description: имя участника
+      education:
+        type: string
+        description: образование участника
+      placeOfWork:
+        type: string
+        description: место работы участника
+      positionAtWork:
+        type: string
+        description: должность участника
+  User:
+    type: object
+    properties:
+      id:
+        type: number
+        format: int
+        description: PK.
+      userName:
+        type: string
+        description: Имя пользователя
+      email:
+        type: string
+        description: Email пользователя
+      city:
+        type: string
+        description: Город
+      age:
+        type: number
+        format: int32
+        description: Возвраст пользователя
+      gender:
+       type: string
+       description: Возвраст пользователя
+      snils:
+        type: number
+        format: int
+        description: СНИЛС
+      passportData:
+        type: number
+        format: int
+        description: паспортные данные
+

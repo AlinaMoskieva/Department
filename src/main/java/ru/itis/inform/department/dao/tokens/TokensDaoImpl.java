@@ -32,9 +32,9 @@ public class TokensDaoImpl implements TokensDao {
     DaoArgumentsVerifier daoArgumentsVerifier;
 
     // language=SQL
-    public static final String SQL_INSERT_TOKENS_INFO_INTO_TOKENS = "INSERT INTO tokens VALUES (:userId, :token)";
+    public static final String SQL_INSERT_TOKENS_INFO_INTO_TOKENS = "INSERT INTO tokens VALUES (:userid, :token)";
     // language=SQL
-    public static  final String SQL_SELECT_TOKEN_FROM_TOKENS = "SELECT token FROM tokens WHERE (userid = :userId)";
+    public static  final String SQL_SELECT_TOKEN_FROM_TOKENS = "SELECT * FROM tokens WHERE (userid = :userid)";
     // language=SQL
     public static final String SQL_SELECT_USER_FROM_TOKENS = "SELECT * FROM tokens WHERE (token = :token)";
 
@@ -42,7 +42,7 @@ public class TokensDaoImpl implements TokensDao {
         @Override
         public Tokens mapRow(ResultSet resultSet, int i) throws SQLException {
             try {
-                return new Tokens(resultSet.getInt("userId"), resultSet.getString("token"));
+                return new Tokens(resultSet.getInt("userid"), resultSet.getString("token"));
             } catch (SQLException e) {
                 throw new IllegalArgumentException(e);
             }
@@ -54,7 +54,7 @@ public class TokensDaoImpl implements TokensDao {
         if (user.getId() == password.getUserId()) {
             token = String.valueOf(user.hashCode() + password.hashCode());
 
-            Map<String, Object> paramMap = paramsMapper.asMap(asList("userId", "token"),
+            Map<String, Object> paramMap = paramsMapper.asMap(asList("userid", "token"),
                     asList(password.getUserId(), token));
 
             sqlQueryExecutor.updateQuery(SQL_INSERT_TOKENS_INFO_INTO_TOKENS,paramMap);
@@ -63,8 +63,8 @@ public class TokensDaoImpl implements TokensDao {
     }
 
     @Override
-    public Tokens getToken(int userId) {
-        Map<String, Object> paramMap = paramsMapper.asMap(asList("userId"), asList(userId));
+    public Tokens getToken(int userid) {
+        Map<String, Object> paramMap = paramsMapper.asMap(asList("userid"), asList(userid));
         return sqlQueryExecutor.queryForObject(SQL_SELECT_TOKEN_FROM_TOKENS,paramMap,TOKENS_ROW_MAPPER);
     }
 

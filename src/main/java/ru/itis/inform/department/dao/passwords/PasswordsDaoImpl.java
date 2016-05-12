@@ -22,15 +22,15 @@ public class PasswordsDaoImpl implements PasswordsDao {
     @Autowired
     SqlQueryExecutor sqlQueryExecutor;
     // language=SQL
-    public static final String SQL_GET_PASSWORD_INFO_FROM_PASSWORDSS = "SELECT * FROM passwords WHERE (userId = :userId) ";
+    public static final String SQL_GET_PASSWORD_INFO_FROM_PASSWORDSS = "SELECT * FROM passwords WHERE (userid = :userid) ";
     // language=SQL
-    public static final String SQL_INSERT_PASSWORDS_INTO_PASSWORDS = "INSERT INTO passwords VALUES (:userId, :login, :password)";
+    public static final String SQL_INSERT_PASSWORDS_INTO_PASSWORDS = "INSERT INTO passwords VALUES (:userid, :login, :password)";
 
     static final RowMapper<Passwords> PASSWORDS_ROW_MAPPER = new RowMapper<Passwords>() {
         @Override
         public Passwords mapRow(ResultSet resultSet, int i) throws SQLException {
             try {
-                return new Passwords(resultSet.getInt("id"), resultSet.getString("login"),
+                return new Passwords(resultSet.getInt("userid"), resultSet.getString("login"),
                         resultSet.getString("password"));
             } catch (SQLException e) {
                 throw new IllegalArgumentException(e);
@@ -39,7 +39,7 @@ public class PasswordsDaoImpl implements PasswordsDao {
     };
     @Override
     public void addKey(Passwords keys) {
-        Map<String, Object> paramMap = paramsMapper.asMap(asList("userId", "login", "password"),
+        Map<String, Object> paramMap = paramsMapper.asMap(asList("userid", "login", "password"),
                 asList(keys.getUserId(), keys.getLogin(), keys.getPassword()));
         sqlQueryExecutor.updateQuery(SQL_INSERT_PASSWORDS_INTO_PASSWORDS, paramMap);
 
@@ -47,8 +47,8 @@ public class PasswordsDaoImpl implements PasswordsDao {
     }
 
     @Override
-    public Passwords getKeys(int userId) {
-        Map<String, Object> paramMap = paramsMapper.asMap(asList("userId"), asList(userId));
+    public Passwords getKeys(int userid) {
+        Map<String, Object> paramMap = paramsMapper.asMap(asList("userid"), asList(userid));
         return sqlQueryExecutor.queryForObject(SQL_GET_PASSWORD_INFO_FROM_PASSWORDSS,paramMap,PASSWORDS_ROW_MAPPER);
     }
 }

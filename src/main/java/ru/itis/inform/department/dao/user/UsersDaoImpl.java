@@ -49,16 +49,16 @@ public class UsersDaoImpl implements UsersDao {
     @Override
     public User getUser(int userId) {
         daoArgumentsVerifier.verifyUser(userId);
-        Map<String, Object> paramMap = paramsMapper.asMap(asList("userId"), asList(userId));
+        Map<String, Object> paramMap = paramsMapper.asMap(asList("id"), asList(userId));
         return sqlQueryExecutor.queryForObject(SQL_GET_USER_BY_ID, paramMap, USER_ROW_MAPPER);
 
     }
 
     @Override
     public void addUser(User user) {
-        daoArgumentsVerifier.verifyUser(user.getId());
+//        daoArgumentsVerifier.verifyUser(user.getId());
         Map<String, Object> paramMap = paramsMapper.asMap(asList("id", "userName", "email", "city", "age", "gender", "passportData", "snils"),
-                asList(user.getId(),user.getUserName(), user.getEmail(),user.getCity(),user.getAge(),user.getGender(),user.getPassportData(),user.getSnils()));
+                asList(user.getId(), user.getUserName(), user.getEmail(),user.getCity(),user.getAge(),user.getGender(),user.getPassportData(),user.getSnils()));
         sqlQueryExecutor.updateQuery(SQL_INSERT_USER_INTO_USERS, paramMap);
 
 

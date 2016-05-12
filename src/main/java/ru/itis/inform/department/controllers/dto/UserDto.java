@@ -1,5 +1,6 @@
 package ru.itis.inform.department.controllers.dto;
 
+import ru.itis.inform.department.dao.models.Passwords;
 import ru.itis.inform.department.dao.models.User;
 
 /**
@@ -14,8 +15,14 @@ public class UserDto {
     private String gender;
     private String passportData;
     private int snils;
+    private String login;
+    private String password;
 
-    public UserDto (User user ){
+    public UserDto(){
+
+    }
+
+    public UserDto (User user, Passwords passwords){
         this.id = user.getId();
         this.userName = user.getUserName();
         this.email = user.getEmail();
@@ -23,6 +30,8 @@ public class UserDto {
         this.age = user.getAge();
         this.gender = user.getGender();
         this.passportData = user.getPassportData();
+        this.password = passwords.getPassword();
+        this.login = passwords.getLogin();
         this.snils = user.getSnils();
     }
 
@@ -88,5 +97,20 @@ public class UserDto {
 
     public void setSnils(int snils) {
         this.snils = snils;
+    }
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
