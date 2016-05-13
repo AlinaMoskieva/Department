@@ -14,9 +14,9 @@ public class User {
     private String age;
     private String gender;
     private String passportData;
-    private int snils;
+    private String snils;
 
-    public User(int id, String userName, String email, String city, String age, String gender, String passportData, int snils) {
+    public User(int id, String userName, String email, String city, String age, String gender, String passportData, String snils) {
         this.id = id;
         this.userName = userName;
         this.email = email;
@@ -58,7 +58,7 @@ public class User {
         return passportData;
     }
 
-    public int getSnils() {
+    public String getSnils() {
         return snils;
     }
 
@@ -90,7 +90,7 @@ public class User {
         this.passportData = passportData;
     }
 
-    public void setSnils(int snils) {
+    public void setSnils(String snils) {
         this.snils = snils;
     }
 

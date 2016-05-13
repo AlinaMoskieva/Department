@@ -25,7 +25,7 @@ CREATE TABLE users (
   age VARCHAR (100),
   gender VARCHAR (100),
   passportData VARCHAR (100),
-  snils int
+  snils VARCHAR (100)
 )
 CREATE TABLE participant (
   id SERIAL PRIMARY KEY,

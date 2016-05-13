@@ -2,81 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70a0f6b7-f4fc-4fda-a5e1-f79e70601134" name="Default" comment="logging added">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/Swagger/swaggerDepartment.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/logging/log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/Aspects/ExeptionAspect.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/Aspects/LoggingAspect.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/WebAppContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/WebAppInitializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/controllers/DepartmentController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/controllers/dto/DocumentDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/controllers/dto/DocumentsDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/controllers/dto/ParticipantDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/controllers/dto/ParticipantsDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/controllers/dto/PasswordDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/controllers/dto/TokenDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/controllers/dto/UserDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/controllers/dto/converters/DtoAndEntityConverter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/controllers/dto/converters/DtoAndEntityConverterImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/DaoArdumentVerifierImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/DaoArgumentsVerifier.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/document/DocumentDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/document/DocumentDaoImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/document/DocumentDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/exeptions/DocumentNotFoundExeption.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/exeptions/ParticipantNotFoundExeption.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/exeptions/TokenNotFoundExeption.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/exeptions/UserIdNotEqualsToPasswordUserId.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/exeptions/UserNotFoundExeption.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/jdbc/ParamsMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/jdbc/ParamsMapperImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/jdbc/SqlQueryExecutor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/jdbc/SqlQueryExecutorImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/models/Document.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/models/Participants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/models/Passwords.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/models/Tokens.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/models/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/participants/ParticipantsDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/passwords/PasswordsDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/passwords/PasswordsDaoImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/passwords/PasswordsDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/tokens/TokensDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/tokens/TokensDaoImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/tokens/TokensDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/user/UsersDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/user/UsersDaoImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/dao/user/UsersDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/services/DocumentService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/services/DocumentServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/services/ParticipantService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/services/ParticipantServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/services/PasswordService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/services/PasswordServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/services/TokensService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/services/TokensServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/services/UsersService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Department-1.4/WEB-INF/classes/ru/itis/inform/department/services/UsersServiceImpl.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/controllers/DepartmentController.class" afterPath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/controllers/DepartmentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/controllers/dto/UserDto.class" afterPath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/controllers/dto/UserDto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/passwords/PasswordsDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/passwords/PasswordsDaoImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/passwords/PasswordsDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/passwords/PasswordsDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/tokens/TokensDaoImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/tokens/TokensDaoImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/tokens/TokensDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/tokens/TokensDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/user/UsersDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/itis/inform/department/dao/user/UsersDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Department_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Department_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Department_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Department_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/UserDto.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/UserDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/passwords/PasswordsDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/passwords/PasswordsDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/User.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/user/UsersDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/user/UsersDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/sql/shema.sql" afterPath="$PROJECT_DIR$/src/main/sql/shema.sql" />
     </list>
     <ignored path="Department.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -223,10 +152,20 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="77" selection-start-line="69" selection-start-column="77" selection-end-line="70" selection-end-column="5" />
+              <caret line="120" column="72" selection-start-line="120" selection-start-column="72" selection-end-line="120" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -235,19 +174,51 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/user/UsersDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="67" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
+              <caret line="42" column="81" selection-start-line="42" selection-start-column="81" selection-end-line="42" selection-end-column="81" />
               <folding>
-                <marker date="1462958420000" expanded="true" signature="1006:1046" placeholder="SELECT * FRO... users" />
-                <marker date="1462958420000" expanded="true" signature="1129:1223" placeholder="INSERT INTO users... " />
+                <marker date="1463125341000" expanded="true" signature="1006:1046" placeholder="SELECT * FRO... users" />
+                <marker date="1463125341000" expanded="true" signature="1129:1223" placeholder="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TokensDaoImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UsersServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/UsersServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/UserDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shema.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/sql/shema.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.67164177">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TokensDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13532764">
+            <state vertical-scroll-proportion="0.0">
               <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
               <folding>
                 <element signature="method#setToken#0;class#TokensDaoImpl#0" expanded="false" />
@@ -264,7 +235,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -275,6 +248,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="26" column="106" selection-start-line="26" selection-start-column="106" selection-end-line="26" selection-end-column="106" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <marker date="1462957900000" expanded="true" signature="878:926" placeholder="SELECT * FRO... passwords" />
                 <marker date="1462957900000" expanded="true" signature="1020:1077" placeholder="INSERT INTO passwords... " />
               </folding>
@@ -309,7 +283,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/DocumentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dto/converters/DtoAndEntityConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dto/converters/DtoAndEntityConverterImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/Document.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/jdbc/SqlQueryExecutorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/DocumentsDto.java" />
@@ -319,7 +292,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/63e16a14-ce37-4dff-99c6-d93d81be1a2b/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/UsersService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/UsersServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/sql/shema.sql" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/Passwords.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/Tokens.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/passwords/PasswordsDao.java" />
@@ -349,11 +321,13 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/DaoArdumentVerifierImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/participants/ParticipantsDaoImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/UserDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/passwords/PasswordsDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/user/UsersDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/user/UsersDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/UserDto.java" />
+        <option value="$PROJECT_DIR$/src/main/sql/shema.sql" />
       </list>
     </option>
   </component>
@@ -2730,12 +2704,12 @@
       <workItem from="1462781859419" duration="5164000" />
       <workItem from="1462865499508" duration="4946000" />
       <workItem from="1462952117493" duration="8086000" />
-      <workItem from="1463077924278" duration="172000" />
+      <workItem from="1463077924278" duration="3031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95599000" />
+    <option name="totallyTimeSpent" value="98458000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -2756,29 +2730,29 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.503231" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19224556" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19224556" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3739726" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18012924" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3634895" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33150685" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3739726" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3004,6 +2978,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding>
+            <element signature="e#2350#2351#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3064,13 +3041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/UsersServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/UsersService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3082,13 +3052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="128" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="128" />
         </state>
       </provider>
     </entry>
@@ -3128,13 +3091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/UserDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/PasswordService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3154,34 +3110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/sql/shema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35869566">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/user/UsersDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="67" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
-          <folding>
-            <marker date="1462958420000" expanded="true" signature="1006:1046" placeholder="SELECT * FRO... users" />
-            <marker date="1462958420000" expanded="true" signature="1129:1223" placeholder="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="77" selection-start-line="69" selection-start-column="77" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/Tokens.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23504274">
@@ -3192,7 +3120,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/tokens/TokensDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13532764">
+        <state vertical-scroll-proportion="0.0">
           <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
           <folding>
             <element signature="method#setToken#0;class#TokensDaoImpl#0" expanded="false" />
@@ -3207,7 +3135,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3216,9 +3146,65 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="106" selection-start-line="26" selection-start-column="106" selection-end-line="26" selection-end-column="106" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1462957900000" expanded="true" signature="878:926" placeholder="SELECT * FRO... passwords" />
             <marker date="1462957900000" expanded="true" signature="1020:1077" placeholder="INSERT INTO passwords... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/DepartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="72" selection-start-line="120" selection-start-column="72" selection-end-line="120" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/dao/user/UsersDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="81" selection-start-line="42" selection-start-column="81" selection-end-line="42" selection-end-column="81" />
+          <folding>
+            <marker date="1463125341000" expanded="true" signature="1006:1046" placeholder="SELECT * FRO... users" />
+            <marker date="1463125341000" expanded="true" signature="1129:1223" placeholder="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/services/UsersServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/itis/inform/department/controllers/dto/UserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/sql/shema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67164177">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

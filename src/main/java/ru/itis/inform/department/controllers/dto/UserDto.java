@@ -14,7 +14,7 @@ public class UserDto {
     private String age;
     private String gender;
     private String passportData;
-    private int snils;
+    private String snils;
     private String login;
     private String password;
 
@@ -91,11 +91,11 @@ public class UserDto {
         this.passportData = passportData;
     }
 
-    public int getSnils() {
+    public String getSnils() {
         return snils;
     }
 
-    public void setSnils(int snils) {
+    public void setSnils(String snils) {
         this.snils = snils;
     }
     public String getLogin() {

@@ -40,7 +40,7 @@ public class UsersDaoImpl implements UsersDao {
                 return new User(resultSet.getInt("id"), resultSet.getString("username"),
                         resultSet.getString("email"), resultSet.getString("city"),
                         resultSet.getString("age"), resultSet.getString("gender"),
-                        resultSet.getString("passportData"), resultSet.getInt("snils"));
+                        resultSet.getString("passportData"), resultSet.getString("snils"));
             } catch (SQLException e) {
                 throw new IllegalArgumentException(e);
             }
